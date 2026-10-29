@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Ironwood Grill</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <p>IRONWOOD GRILL</p>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="menu-title">Order Your Meal</h1>
+
+        <form id="order-form"> <!-- Form for ordering food items. -->
+
+            <div class="menu-grid"> <!-- Container for the restaurant's menu items -->
+
+                <section> <!-- This section contains menu items and their prices. -->
+                    <img class="menu-image" src="images/ribeye.png" alt="Ribeye Steak served at Ironwood Grill">
+                    <h2>Ribeye Steak</h2>
+                    <p>$34.99</p>
+                    <p>subtotal: $<span id="ribeye-subtotal">0.00</span></p>
+
+                    <label for="ribeye-quantity">Quantity:</label>
+                    <input type="number" id="ribeye-quantity" min="0" max="20" step="1" value="0" required>
+                </section>
+
+                <section>
+                    <img class="menu-image" src="images/burger.png" alt="Burger served at Ironwood Grill">
+                    <h2>Burger</h2>
+                    <p>$18.99</p>
+                    <p>subtotal: $<span id="burger-subtotal">0.00</span></p>
+
+                    <label for="burger-quantity">Quantity:</label>
+                    <input type="number" id="burger-quantity" min="0" max="20" step="1" value="0" required>
+                </section>
+
+                <section>
+                    <img class="menu-image" src="images/grilled-chicken.png" alt="Grilled Chicken served at Ironwood Grill">
+                    <h2>Grilled Chicken</h2>
+                    <p>$24.99</p>
+                    <p>subtotal: $<span id="chicken-subtotal">0.00</span></p>
+
+                    <label for="chicken-quantity">Quantity:</label>
+                    <input type="number" id="chicken-quantity" min="0" max="20" step="1" value="0" required>
+                </section>
+
+                <section>
+                    <img class="menu-image" src="images/salmon.png" alt="Grilled Salmon served at Ironwood Grill">
+                    <h2>Grilled Salmon</h2>
+                    <p>$29.99</p>
+                    <p>subtotal: $<span id="salmon-subtotal">0.00</span></p>
+
+                    <label for="salmon-quantity">Quantity:</label>
+                    <input type="number" id="salmon-quantity" min="0" max="20" step="1" value="0" required>
+                </section>
+
+                <section>
+                    <img class="menu-image" src="images/ribs.png" alt="BBQ Ribs served at Ironwood Grill">
+                    <h2>BBQ Ribs</h2>
+                    <p>$32.99</p>
+                    <p>subtotal: $<span id="ribs-subtotal">0.00</span></p>
+
+                    <label for="ribs-quantity">Quantity:</label>
+                    <input type="number" id="ribs-quantity" min="0" max="20" step="1" value="0" required>
+                </section>
+
+                <section>
+                    <img class="menu-image" src="images/filet-mignon.png" alt="Filet Mignon served at Ironwood Grill">
+                    <h2>Filet Mignon</h2>
+                    <p>$39.99</p>
+                    <p>subtotal: $<span id="filet-subtotal">0.00</span></p>
+
+                    <label for="filet-quantity">Quantity:</label>
+                    <input type="number" id="filet-quantity" min="0" max="20" step="1" value="0" required>
+                </section>
+
+                <section>
+                    <img class="menu-image" src="images/loaded-fries.png" alt="Loaded Fries served at Ironwood Grill">
+                    <h2>Loaded Fries</h2>
+                    <p>$9.99</p>
+                    <p>subtotal: $<span id="fries-subtotal">0.00</span></p>
+
+                    <label for="fries-quantity">Quantity:</label>
+                    <input type="number" id="fries-quantity" min="0" max="20" step="1" value="0" required>
+                </section>
+
+                <section>
+                    <img class="menu-image" src="images/shrimp-skewers.png" alt="Shrimp Skewers served at Ironwood Grill">
+                    <h2>Shrimp Skewers</h2>
+                    <p>$21.99</p>
+                    <p>subtotal: $<span id="shrimp-subtotal">0.00</span></p>
+
+                    <label for="shrimp-quantity">Quantity:</label>
+                    <input type="number" id="shrimp-quantity" min="0" max="20" step="1" value="0" required>
+                </section>
+
+                <section>
+                    <img class="menu-image" src="images/steak-tacos.png" alt="Steak Tacos served at Ironwood Grill">
+                    <h2>Steak Tacos</h2>
+                    <p>$17.99</p>
+                    <p>subtotal: $<span id="tacos-subtotal">0.00</span></p>
+
+                    <label for="tacos-quantity">Quantity:</label>
+                    <input type="number" id="tacos-quantity" min="0" max="20" step="1" value="0" required>
+                </section>
+
+                <section>
+                    <img class="menu-image" src="images/lava-cake.png" alt="Chocolate Lava Cake served at Ironwood Grill">
+                    <h2>Chocolate Lava Cake</h2>
+                    <p>$11.99</p>
+                    <p>subtotal: $<span id="lava-subtotal">0.00</span></p>
+
+                    <label for="lava-quantity">Quantity:</label>
+                    <input type="number" id="lava-quantity" min="0" max="20" step="1" value="0" required>
+                </section>
+
+            </div>
+
+            <section class="order-summary">
+                <h2>Order Summary</h2>
+
+                <p>Total: $<span id="order-total">0.00</span></p>
+                <p>Subtotal: $<span id="order-subtotal">0.00</span></p>
+                <p>GST: (5%) $<span id="gst-amount">0.00</span></p>
+
+                <button id="generate-receipt" type="submit">
+                    Generate Receipt
+                </button>
+            </section>
+
+        </form>
+
+        <div id="receipt-container" hidden>
+            <h2>IRONWOOD GRILL</h2>
+            <p class="receipt-subtitle">ORDER RECEIPT</p>
+
+            <p>Date: <span id="receipt-date"></span></p>
+            <p>Time: <span id="receipt-time"></span></p>
+
+            <div id="receipt-items"></div>
+
+            <button type="button" id="download-pdf-btn">
+        Download PDF
+    </button>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>©<span id="current-year"></span> Ironwood Grill. All rights reserved.</p>
+
+        <a href="https://github.com/franly1107" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/franly-enmanuel-javier" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+
+        <p>Calgary Time: <span id="calgary-time"></span></p>
+        <p>Calgary Weather: <span id="calgary-weather"></span></p>
+    </footer>
+
+</body>
+</html>

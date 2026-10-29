@@ -1,0 +1,357 @@
+#food-gallery img {
+    width: 400px;
+    max-width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Arranges carousel controls and allows wrapping on small screens */
+.carousel-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.carousel-controls button {
+    background-color: #19382E;
+    color: #C6A15B;
+    border: 2px solid #C6A15B;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.carousel-controls button:hover {
+    background-color: #C6A15B;
+    color: #19382E;
+}
+
+@media (max-width: 480px) {
+    .carousel-controls button {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+}
+
+body {
+    background-color: #F5F0E6;
+    color: #19382E;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+header {
+    background-color: #19382E;
+    color: #C6A15B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+header nav a {
+    color: #F5F0E6;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.order-btn {
+    display: inline-block;
+    background-color: #C6A15B;
+    color: #19382E;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 18px;
+}
+
+.order-btn:hover {
+    background-color: #19382E;
+    color: #C6A15B;
+}
+
+#food-gallery {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+#food-gallery h2 {
+    font-size: 32px;
+    color: #19382E;
+    margin-bottom: 30px;
+}
+
+footer {
+    background-color: #19382E;
+    color: #F5F0E6;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer a:hover {
+    color: #F5F0E6;
+}
+
+footer a {
+    color: #C6A15B;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+#receipt-container {
+    background-color: white;
+    width: 350px;
+    max-width: calc(100% - 30px);
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 20px auto;
+    border: 1px dashed grey;
+
+    /* what this does is make the text appear in a fixed-width font,
+       which is useful for displaying code or other text where the
+       spacing between characters is important */
+    font-family: monospace;
+}
+
+#receipt-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.receipt-total {
+    font-weight: bold;
+    margin-top: 15px;
+    border-top: 1px dashed grey;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#receipt-items li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.receipt-subtotal {
+    font-weight: bold;
+    margin-top: 15px;
+    border-top: 1px dashed grey;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.receipt-subtitle {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.receipt-gst {
+    font-weight: bold;
+    margin-top: 15px;
+    border-top: 1px dashed grey;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.receipt-details {
+    display: block;
+    font-size: 12px;
+    color: grey;
+    margin-top: 4px;
+}
+
+
+/* Homepage hero section */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+/* Styles the main heading on the homepage */
+.hero h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #19382E;
+    margin-bottom: 20px;
+}
+
+/* Styles the description in the homepage hero section */
+.hero p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* Adjusts the homepage hero section for mobile screens */
+@media (max-width: 480px) {
+
+    .hero {
+        padding: 40px 15px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    /* Stacks the restaurant name and navigation on mobile */
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+}
+
+
+/* Arranges the restaurant menu items into two columns */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+/* Styles each restaurant menu item as a card */
+.menu-grid section {
+    background-color: #FFFFFF;
+    border: 1px solid #C6A15B;
+    border-radius: 12px;
+    padding: 25px;
+    min-width: 0;
+}
+
+/* Displays menu cards in one column on mobile screens */
+@media (max-width: 480px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+        margin: 20px 15px;
+    }
+}
+
+
+/* Styles the restaurant's order summary */
+.order-summary {
+    background-color: #FFFFFF;
+    border: 1px solid #C6A15B;
+    border-radius: 12px;
+    padding: 25px;
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+/* Styles the Generate Receipt button */
+#generate-receipt {
+    background-color: #19382E;
+    color: #FFFFFF;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Changes the Generate Receipt button when hovered */
+#generate-receipt:hover {
+    background-color: #C6A15B;
+    color: #19382E;
+}
+
+
+/* Styles the images displayed on each menu card */
+.menu-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Centers the heading on the restaurant menu page */
+.menu-title {
+    text-align: center;
+    margin: 40px 15px 20px;
+}
+
+/* Keeps the quantity inputs inside their menu cards */
+.menu-grid input {
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+}
+
+/* Adds spacing around the menu on smaller screens */
+@media (max-width: 700px) {
+    .menu-grid,
+    .order-summary {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+
+/* ==========================================
+   PRINT RECEIPT AS PDF
+   ========================================== */
+
+@media print {
+
+    /* Hide everything on the webpage */
+    body * {
+        visibility: hidden;
+    }
+
+    /* Show only the receipt and its contents */
+    #receipt-container,
+    #receipt-container * {
+        visibility: visible;
+    }
+
+    /* Position the receipt at the top of the page */
+    #receipt-container {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        max-width: none;
+        box-shadow: none;
+        border: none;
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    /* Hide the Download PDF button from the PDF */
+    #download-pdf-btn {
+        display: none;
+    }
+}

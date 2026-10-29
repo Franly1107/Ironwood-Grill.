@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ironwood Grill | Modern Steakhouse</title>
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg"> <!-- Favicon for the website -->
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <p>IRONWOOD GRILL</p>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <h1>Welcome to Ironwood Grill</h1>
+
+            <p>
+                Experience premium cuts, bold flavors, and tropical elegance
+                at Ironwood Grill, where every meal is crafted to perfection.
+            </p>
+
+            <a href="menu.html" class="order-btn">Order now</a>
+        </section>
+
+        <section id="food-gallery">
+            <h2>Explore Our Signature Dishes</h2>
+
+            <div class="carousel">
+                <img
+                    src="images/ribeye.png"
+                    alt="Grilled ribeye steak with mashed potatoes and asparagus."
+                >
+
+                <div class="carousel-controls">
+                    <button id="next-btn" type="button">Next</button>
+                    <button id="prev-btn" type="button">Previous</button>
+                    <button id="pause-btn" type="button">Pause</button>
+                    <button id="resume-btn" type="button">Resume</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>©<span id="current-year"></span> Ironwood Grill. All rights reserved.</p>
+
+        <a
+            href="https://github.com/franly1107"
+            target="_blank"
+            rel="noopener noreferrer"
+        >GitHub</a>
+
+        <a
+            href="https://www.linkedin.com/in/franly-enmanuel-javier"
+            target="_blank"
+            rel="noopener noreferrer"
+        >LinkedIn</a>
+
+        <p>Calgary Time: <span id="calgary-time"></span></p>
+        <p>Calgary Weather: <span id="calgary-weather"></span></p>
+        <p>Food images generated using OpenAI's ChatGPT.</p>   <!-- Image Attribution -->
+    </footer>
+
+</body>
+</html>
